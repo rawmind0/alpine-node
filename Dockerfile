@@ -1,21 +1,21 @@
-FROM rawmind/alpine-monit:0.5.19-2
+FROM rawmind/alpine-monit:0.5.20-4
 MAINTAINER Raul Sanchez <rawmind@gmail.com>
 
 # ENV VERSION=v0.10.46 CFLAGS="-D__USE_MISC" NPM_VERSION=2
 # ENV VERSION=v0.12.15 NPM_VERSION=2
 # ENV VERSION=v4.4.7 NPM_VERSION=2
 # ENV VERSION=v5.12.0 NPM_VERSION=3
-# ENV VERSION=v6.3.1 NPM_VERSION=3
+# ENV VERSION=v6.7.0 NPM_VERSION=3
 
 ENV SERVICE_NAME=node                                       \
     SERVICE_HOME=/opt/node                                  \
-    SERVICE_VERSION=v5.12.0                                 \
+    SERVICE_VERSION=v6.7.0                                  \
     NPM_VERSION=3
 ENV PATH=${SERVICE_HOME}/bin:${PATH}                        \
     SERVICE_CONF=${SERVICE_HOME}/etc/haproxy.cfg            \
     SERVICE_URL=https://nodejs.org/dist/${SERVICE_VERSION}  \ 
     SERVICE_RELEASE=node-${SERVICE_VERSION}                 \
-    CONFIG_FLAGS="--fully-static --without-npm"             \
+    CONFIG_FLAGS="--fully-static"             \
     DEL_PKGS="libgcc libstdc++"                             \
     RM_DIRS="/opt/src /usr/include"
 
