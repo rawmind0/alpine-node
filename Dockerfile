@@ -5,11 +5,11 @@ MAINTAINER Raul Sanchez <rawmind@gmail.com>
 # ENV VERSION=v0.12.15 NPM_VERSION=2
 # ENV VERSION=v4.4.7 NPM_VERSION=2
 # ENV VERSION=v5.12.0 NPM_VERSION=3
-# ENV VERSION=v6.7.0 NPM_VERSION=3
+# ENV VERSION=v6.9.5 NPM_VERSION=3
 
 ENV SERVICE_NAME=node                                       \
     SERVICE_HOME=/opt/node                                  \
-    SERVICE_VERSION=v6.7.0                                  \
+    SERVICE_VERSION=v6.9.5                                  \
     NPM_VERSION=3
 ENV PATH=${SERVICE_HOME}/bin:${PATH}                        \
     SERVICE_CONF=${SERVICE_HOME}/etc/haproxy.cfg            \
