@@ -1,21 +1,25 @@
-FROM rawmind/alpine-monit:0.5.20-4
+FROM rawmind/alpine-monit:5.25-0
 MAINTAINER Raul Sanchez <rawmind@gmail.com>
 
 # ENV VERSION=v0.10.46 CFLAGS="-D__USE_MISC" NPM_VERSION=2
 # ENV VERSION=v0.12.15 NPM_VERSION=2
-# ENV VERSION=v4.4.7 NPM_VERSION=2
+# ENV VERSION=v4.7.3 NPM_VERSION=2
 # ENV VERSION=v5.12.0 NPM_VERSION=3
 # ENV VERSION=v6.9.5 NPM_VERSION=3
+# ENV VERSION=v7.5.0 NPM_VERSION=3
+# ENV VERSION=v8.11.2 NPM_VERSION=5 YARN_VERSION=latest
+# ENV VERSION=v9.11.1 NPM_VERSION=5 YARN_VERSION=latest
+# ENV VERSION=v10.1.0 NPM_VERSION=5 YARN_VERSION=latest
 
 ENV SERVICE_NAME=node                                       \
     SERVICE_HOME=/opt/node                                  \
-    SERVICE_VERSION=v6.9.5                                  \
-    NPM_VERSION=3
+    SERVICE_VERSION=8.11.2                                  \
+    NPM_VERSION=5
 ENV PATH=${SERVICE_HOME}/bin:${PATH}                        \
     SERVICE_CONF=${SERVICE_HOME}/etc/haproxy.cfg            \
-    SERVICE_URL=https://nodejs.org/dist/${SERVICE_VERSION}  \ 
-    SERVICE_RELEASE=node-${SERVICE_VERSION}                 \
-    CONFIG_FLAGS="--fully-static"             \
+    SERVICE_URL=https://nodejs.org/dist/v${SERVICE_VERSION}  \ 
+    SERVICE_RELEASE=node-v${SERVICE_VERSION}                 \
+    CONFIG_FLAGS="--fully-static"                           \
     DEL_PKGS="libgcc libstdc++"                             \
     RM_DIRS="/opt/src /usr/include"
 
