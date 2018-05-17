@@ -13,6 +13,7 @@ docker build -t rawmind/alpine-node:<version> .
 
 ## Versions
 
+- `9.11.1-0` [(Dockerfile)](https://github.com/rawmind0/alpine-node/blob/9.11.1-0/Dockerfile)
 - `8.11.2-1` [(Dockerfile)](https://github.com/rawmind0/alpine-node/blob/8.11.2-1/Dockerfile)
 - `6.9.5` [(Dockerfile)](https://github.com/rawmind0/alpine-node/blob/6.9.5/Dockerfile)
 - `6.7.0` [(Dockerfile)](https://github.com/rawmind0/alpine-node/blob/6.7.0/Dockerfile)
