@@ -13,8 +13,8 @@ MAINTAINER Raul Sanchez <rawmind@gmail.com>
 
 ENV SERVICE_NAME=node                                       \
     SERVICE_HOME=/opt/node                                  \
-    SERVICE_VERSION=9.11.1                                  \
-    NPM_VERSION=5
+    SERVICE_VERSION=10.1.0                                  \
+    NPM_VERSION=6
 ENV PATH=${SERVICE_HOME}/bin:${PATH}                        \
     SERVICE_CONF=${SERVICE_HOME}/etc/haproxy.cfg            \
     SERVICE_URL=https://nodejs.org/dist/v${SERVICE_VERSION}  \ 
