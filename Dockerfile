@@ -1,4 +1,4 @@
-FROM rawmind/alpine-monit:5.25-0
+FROM rawmind/alpine-monit:5.25-3
 MAINTAINER Raul Sanchez <rawmind@gmail.com>
 
 # ENV VERSION=v0.10.46 CFLAGS="-D__USE_MISC" NPM_VERSION=2
